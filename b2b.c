@@ -27,7 +27,8 @@ int main(int argc, char** argv)
 				fprintf(stdout, "%.llX\n", strtouq(argv[i], NULL, atoi(argv[1])));
 				break;
 			default:
-				break;
+				fprintf(stderr, "Error: destination base %s is unsupported!\n", argv[2]); 
+				exit(EXIT_FAILURE);
 		}
 	}
 
